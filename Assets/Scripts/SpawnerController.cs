@@ -40,7 +40,6 @@ public class SpawnerController : MonoBehaviour
     {
         control = true;//bir sonraki spawn tetiklemesi için izin verildi
         Instantiate(obj, transform.position, Quaternion.identity);//spawn edildi
-        GameObject.Find("Commander").GetComponent<CommanderController>().newState = true;//komutana haber edildi yeni durum var diye
         number--;//spawn edilecek asker sayısı bir eksiltildi
     }
 }

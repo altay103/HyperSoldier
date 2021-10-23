@@ -31,10 +31,17 @@ public class SoldierPositionController : MonoBehaviour
                 {
 
                     anim.SetBool("Back", true);//arka sıra animasyonu (orn legionMan için kalkan kaldırma) 
+                    anim.SetBool("Fight", false);//kavga animasyonu
+                }
+                else if(hit.collider.tag=="Enemy")//şayet düşman askere çarparsa
+                {
+                    anim.SetBool("Back", false);//ön sıra  animasyonu (orn legionMan için kalkan kaldırma)
+                    anim.SetBool("Fight", true);//kavga animasyonu
                 }
                 else
                 {
-                    anim.SetBool("Back", false);//ön sıra  animasyonu (orn legionMan için kalkan kaldırma) 
+                    anim.SetBool("Fight", false);//kavga animasyonu
+                    anim.SetBool("Back", false);//ön sıra  animasyonu (orn legionMan için kalkan kaldırma)
                 }
 
             }
@@ -42,6 +49,7 @@ public class SoldierPositionController : MonoBehaviour
             {
                 Debug.DrawLine(transform.position, transform.position + transform.forward*distance, Color.green);//debug için cizgi çekiyoruz 
                 anim.SetBool("Back", false);//arka sıra animasyonu (orn legionMan için kalkan kaldırma) 
+                anim.SetBool("Fight", false);//kavga animasyonu 
             }
         }
     }

@@ -59,7 +59,7 @@ public class SoldierSortController : MonoBehaviour
         SetTarget();//yeni konum belirlenir
         agent.SetDestination(target);//asker yeni konuma doğru gider
 
-        Debug.Log(order);
+        //Debug.Log(order);
 
     }
     void SetOrder()

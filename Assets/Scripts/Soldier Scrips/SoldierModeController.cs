@@ -4,7 +4,7 @@ using UnityEngine;
 //using Iman.Power;
 public class SoldierModeController : MonoBehaviour
 {
-    
+
 
     public List<GameObject> soldierTypes;//asker tiplerini tutuyor 
     /*
@@ -12,19 +12,23 @@ public class SoldierModeController : MonoBehaviour
      Static mode değişlenine atılan ilk değer doğar doğmaz çıkıcak askeri temsil eder
      */
     public static int Mode = 0;//LegionMan=0 PhalanxMan=1 ArcherMan=2 vs ilerde eklenirse buraya eklenicek 
-    int mode=-1;//modu tutuyoruz ilk defa çalışacağında çalışması için -1 gibi anlamsız bir değer atadım.
+    int mode = -1;//modu tutuyoruz ilk defa çalışacağında çalışması için -1 gibi anlamsız bir değer atadım.
     /*
      Bu Script
      Asker modunu ayarlıyor
      Şayet dışardan static Mode değişkeni değiştirileceke olursa mod değişecektir.
      
      */
- 
+    void Start()
+    {
+       GameObject.Find("Commander").GetComponent<CommanderController>().newState = true;//komutana haber edildi yeni durum var diye
+       //Çünkü Yeni Asker Geldi 
+    }
 
     void Update()
     {
         CreateChild(mode);//moda göre child spawn ediyoruz
-        
+        mode = Mode;
     }
     void CreateChild(int mode)
     {
@@ -39,8 +43,8 @@ public class SoldierModeController : MonoBehaviour
             tempChild = Instantiate(soldierTypes[Mode], transform.position, Quaternion.identity);//istenen tipte askermodeli spawn ettik
             tempChild.transform.parent = transform;//bu askeride childimiz yaptık
 
-            mode = Mode;//anlık modu statik mod ile eşitledik
-            
+            //mode = Mode;//anlık modu statik mod ile eşitledik
+
         }
     }
 }

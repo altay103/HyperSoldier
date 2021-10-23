@@ -60,6 +60,7 @@
     <Compile Include="Assets\Scripts\SpawnerController.cs" />
     <Compile Include="Assets\Scripts\CommanderController.cs" />
     <Compile Include="Assets\Scripts\Soldier Scrips\SoldierModeController.cs" />
+    <Compile Include="Assets\Scripts\Soldier Scrips\SoldierRecruitmentController.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
