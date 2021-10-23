@@ -35,8 +35,8 @@ public class SoilderModeController : MonoBehaviour
             }
             tempChild = Instantiate(soilderTypes[Mode], transform.position, Quaternion.identity);
             tempChild.transform.parent = transform;
-            tempChild.transform.Rotate(-90, 0, 0);
-            tempChild.transform.Translate(0, 0, 1);
+            //tempChild.transform.Rotate(-90, 0, 0);
+            //tempChild.transform.Translate(0, 0, 1);
         }
     }
 }
