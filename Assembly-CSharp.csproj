@@ -53,13 +53,13 @@
     <UnityVersion>2020.3.19f1</UnityVersion>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="Assets\Scripts\Soilder Scrips\SoilderSortController.cs" />
-    <Compile Include="Assets\Scripts\Soilder Scrips\SoilderPositionController.cs" />
+    <Compile Include="Assets\Scripts\Soldier Scrips\SoldierSortController.cs" />
+    <Compile Include="Assets\Scripts\Soldier Scrips\SoldierPositionController.cs" />
     <Compile Include="Assets\Scripts\TransformFix.cs" />
     <Compile Include="Assets\Scripts\LeaderController.cs" />
     <Compile Include="Assets\Scripts\SpawnerController.cs" />
     <Compile Include="Assets\Scripts\CommanderController.cs" />
-    <Compile Include="Assets\Scripts\Soilder Scrips\SoilderModeController.cs" />
+    <Compile Include="Assets\Scripts\Soldier Scrips\SoldierModeController.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

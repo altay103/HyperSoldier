@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class LeaderController : MonoBehaviour
 {
-    // Start is called before the first frame update
-    public float speed = 2;
+   
+    public float speed = 2;//liderin hızı
     void Start()
     {
         
@@ -14,10 +14,10 @@ public class LeaderController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        float ver = Input.GetAxis("Vertical");
-        float hor = Input.GetAxis("Horizontal");
+        float ver = Input.GetAxis("Vertical");//ileri geri tuşlarının basılma değerini aldık
+        float hor = Input.GetAxis("Horizontal");//sağ sol tuşlarının basılma değerlerini aldık
 
-        transform.Translate(speed*hor * Time.deltaTime, 0,speed* ver * Time.deltaTime);
+        transform.Translate(speed*hor * Time.deltaTime, 0,speed* ver * Time.deltaTime);//alınan verilere göre hareket sağladık
 
     }
 }

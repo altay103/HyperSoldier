@@ -4,70 +4,53 @@ using UnityEngine;
 
 public class CommanderController : MonoBehaviour
 {
-    // Start is called before the first frame update
     [HideInInspector]
-    public bool newState=false;
+    public bool newState=false;//bu yeni bir sıralama olup olmadığını kaydediyor
     [HideInInspector]
-    public List<int> sortData;
-    [HideInInspector]
-    public float id=0;
-    [HideInInspector]
-    public GameObject leader;
+    public List<int> sortData;//bu sıralamayı tutuyor 
     
-    void Start()
-    {
-        
-    }
-
+    /*
+     sıra dizilimi id lere göre yapılır
+     yeni doğan her askere bir id verilir . 
+     Sıralama da sondakiler arkadaya geçicek şekilde yapılır 
+     bu scriptin yaptığı tek şey yeni sıraları ayarlayıp 
+     askerleri yeni sıraya yapıldı yerlerinizi düzenleyin demektir (onların newStateni true yapıcak )
+     */
     // Update is called once per frame
     void Update()
     {
-        if (newState)
+        if (newState)//yeni bir durum olmuşsa (biri ölmüş yada gruba yeni biri katılmış)
         {
             newState = false;
-            //düzenlemeler yapılır 
-            SortSoilder();
-            WakeUp();
+         
+            SortSoldier();//sıralama yapılır
+            WakeUp();//askerlere yeni sıralama yapıldığı haber edilir (Onlarında kendi içinde newState sistemi var)
         }
     }
-    void SortSoilder()
+    void SortSoldier()
     {
-        if (sortData.Count > 0)
+        if (sortData.Count > 0)//sıralama bilgisini tutan liste boş değilse
         {
-            sortData.Clear();
+            sortData.Clear();//temizleyelim
         }
       
-        GameObject[] soilders=GameObject.FindGameObjectsWithTag("Soilder");
-        foreach(GameObject soilder in soilders)
+        GameObject[] soldiers=GameObject.FindGameObjectsWithTag("Soldier");//Oyundaki bütün askerleri diziye kaydettim
+        foreach(GameObject soldier in soldiers)//tek tek askerlerin idlerini alalım ki sıralayabilelim 
         {
-            sortData.Add(soilder.GetComponent<SoilderSortController>().id);
+            sortData.Add(soldier.GetComponent<SoldierSortController>().id);//ekledik idleri listeye
+            
         }
-        sortData.Sort();
         
-        string log=id.ToString()+':';
-        id++;
-        foreach(int data in sortData)
-        {
-            log += ' ' + data.ToString();
-        }
-        //Debug.Log(log);
-
-        foreach(GameObject soilder in soilders)
-        {
-            if (soilder.GetComponent<SoilderSortController>().id == sortData[0])
-            {
-                leader = soilder;
-                break;
-            }
-        }
+        sortData.Sort();//Daha sonra sıraladık bir fonk ile 
+        
 
     }
     void WakeUp()
     {
-        GameObject[] soilders = GameObject.FindGameObjectsWithTag("Soilder");
-        foreach (GameObject soilder in soilders)
+        GameObject[] soldiers = GameObject.FindGameObjectsWithTag("Soldier");//tüm askerleri diziye attık
+        foreach (GameObject soldier in soldiers)//tek tek çekip
         {
-            soilder.GetComponent<SoilderSortController>().newState=true;
+            soldier.GetComponent<SoldierSortController>().newState=true;//yeni durum oldu dedik yani newState i true yaptık
         }
     }
 }
