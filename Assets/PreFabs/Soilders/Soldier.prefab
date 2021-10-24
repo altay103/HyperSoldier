@@ -107,7 +107,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   soldierTypes:
-  - {fileID: 5575366831993473433, guid: 178dfe25ef80a634298bfc90e6315374, type: 3}
+  - {fileID: 5575366831993473433, guid: ac8f96081d8be344f9f03e1c3e7662db, type: 3}
 --- !u!114 &8830638433659625440
 MonoBehaviour:
   m_ObjectHideFlags: 0

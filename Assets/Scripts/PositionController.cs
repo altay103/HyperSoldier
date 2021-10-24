@@ -56,8 +56,8 @@ public class PositionController : MonoBehaviour
     /* İş Kolaylaştıran fonksiyonlar */
     void Idle()
     {
-        childRay = transform.GetChild(0).gameObject.GetComponent<LegioRaycastController>().ray;//çocuğun ışını aldık
-        childDistance = transform.GetChild(0).gameObject.GetComponent<LegioRaycastController>().distance;//çocuğun ışın mesafesini aldık
+        childRay = transform.GetChild(0).gameObject.GetComponent<RaycastController>().ray;//çocuğun ışını aldık
+        childDistance = transform.GetChild(0).gameObject.GetComponent<RaycastController>().distance;//çocuğun ışın mesafesini aldık
         RaycastHit childHit;//çocuğumuzun çarptığı obje
         
         /*Bu kısım idle kısım*/

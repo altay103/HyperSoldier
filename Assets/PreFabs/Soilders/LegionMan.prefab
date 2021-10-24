@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 6621721501421112315}
   - component: {fileID: 2215772024355335379}
   - component: {fileID: 7288034805229391212}
-  - component: {fileID: 7081892012024364002}
+  - component: {fileID: 6203147808255658414}
   m_Layer: 0
   m_Name: LegionMan
   m_TagString: Untagged
@@ -122,7 +122,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 894edde63f1bddc4585372eb20c3bd84, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &7081892012024364002
+--- !u!114 &6203147808255658414
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
