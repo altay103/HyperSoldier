@@ -35,15 +35,23 @@ public class SoldierModeController : MonoBehaviour
         if (mode != Mode)//şayet anlık mod static moddan farklı ise 
         {
             GameObject tempChild;//işlem yapıcağımız gameobject seçiyoruz
+            Quaternion rotation=Quaternion.identity;//yaratılacak askerin yönünü tutuyor
             if (transform.childCount > 0)//şayet halihazırda çocuk varsa
             {
                 tempChild = transform.GetChild(0).gameObject;//çocuğu çektik
+                tempChild.transform.Rotate(90, 0, 0);
+                rotation = tempChild.transform.rotation;//eski askerin yönünü alıyoruz
                 Destroy(tempChild);//sonra destroy ettik
             }
-            tempChild = Instantiate(soldierTypes[Mode], transform.position, Quaternion.identity);//istenen tipte askermodeli spawn ettik
+            tempChild = Instantiate(soldierTypes[Mode], transform.position, rotation);//istenen tipte askermodeli spawn ettik
             tempChild.transform.parent = transform;//bu askeride childimiz yaptık
 
             //mode = Mode;//anlık modu statik mod ile eşitledik
+
+            //ReFix
+            
+            
+
 
         }
     }
