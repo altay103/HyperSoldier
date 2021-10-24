@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 6621721501421112315}
   - component: {fileID: 2215772024355335379}
   - component: {fileID: 7288034805229391212}
+  - component: {fileID: 7081892012024364002}
   m_Layer: 0
   m_Name: LegionMan
   m_TagString: Untagged
@@ -60,6 +61,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -88,6 +90,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!95 &2215772024355335379
 Animator:
   serializedVersion: 3
@@ -119,6 +122,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 894edde63f1bddc4585372eb20c3bd84, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &7081892012024364002
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5575366831993473433}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee85b259017808845b936a6d2b09b365, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  distance: 2
 --- !u!1001 &3820593586959518845
 PrefabInstance:
   m_ObjectHideFlags: 0

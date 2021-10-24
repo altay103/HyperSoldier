@@ -13,7 +13,7 @@ public class SoldierRecruitmentController : MonoBehaviour
   
     private void OnCollisionEnter(Collision collision)
     {
-        Debug.Log(collision.gameObject.tag);
+        //Debug.Log(collision.gameObject.tag);
         if (collision.gameObject.tag == "ProtoMan")//Askerin çarptýðý protoman ise yani toplanýcak asker ise
         {
             Vector3 protoPosition = collision.gameObject.transform.position;//ilk önce pozisyonunu alýyoruz ilerde kullanýcaz

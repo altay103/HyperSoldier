@@ -17,7 +17,10 @@ public class LeaderController : MonoBehaviour
         float ver = Input.GetAxis("Vertical");//ileri geri tuşlarının basılma değerini aldık
         float hor = Input.GetAxis("Horizontal");//sağ sol tuşlarının basılma değerlerini aldık
 
-        transform.Translate(speed*hor * Time.deltaTime, 0,speed* ver * Time.deltaTime);//alınan verilere göre hareket sağladık
+        transform.Translate(speed*hor * Time.deltaTime, 0,speed* ver * Time.deltaTime,Space.World);//alınan verilere göre hareket sağladık
+        
+
+  
 
     }
 }

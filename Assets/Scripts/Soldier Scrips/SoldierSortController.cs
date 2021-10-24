@@ -82,12 +82,16 @@ public class SoldierSortController : MonoBehaviour
     {
         if (leader != null)//lider varsa gircek
         {
+            /*tek boyutlu bir listeyi 2 boyutlu bir hale çevirmek için 
+             * gerekli matematik işlemleri
+             */
             int row, column;
             row = order / lenght;
             column = order % lenght;
+            
 
-
-
+            //elimizdeki konum değerlerini kullanarak ve
+            //lideri referans alarak yeni hedef konumumuzu belirliyoruz
             target.z = leader.transform.position.z - (row * (size.z + margin));
             target.x = leader.transform.position.x - (column * (size.x + margin));
             target.y = leader.transform.position.y;

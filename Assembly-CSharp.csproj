@@ -54,13 +54,17 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\Soldier Scrips\SoldierSortController.cs" />
-    <Compile Include="Assets\Scripts\Soldier Scrips\SoldierPositionController.cs" />
+    <Compile Include="Assets\Scripts\PositionController.cs" />
     <Compile Include="Assets\Scripts\TransformFix.cs" />
     <Compile Include="Assets\Scripts\LeaderController.cs" />
     <Compile Include="Assets\Scripts\SpawnerController.cs" />
     <Compile Include="Assets\Scripts\CommanderController.cs" />
     <Compile Include="Assets\Scripts\Soldier Scrips\SoldierModeController.cs" />
     <Compile Include="Assets\Scripts\Soldier Scrips\SoldierRecruitmentController.cs" />
+    <Compile Include="Assets\Scripts\Raycast Controller(for soldier types)\LegioRaycastController.cs" />
+    <Compile Include="Assets\Scripts\EnemyScripts\EnemySpawnerController.cs" />
+    <Compile Include="Assets\Scripts\EnemyScripts\EnemyCreateController.cs" />
+    <Compile Include="Assets\Scripts\EnemyScripts\EnemyMoveController.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
