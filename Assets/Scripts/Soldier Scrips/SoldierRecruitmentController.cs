@@ -6,6 +6,8 @@ public class SoldierRecruitmentController : MonoBehaviour
 {
     // Start is called before the first frame update
     public GameObject soldier;
+   
+
     /*
      Bu scriptin amacý Asker Toplamaktýr
      Temas ettiðimiz protomanleri soldiera çevirir(Onlarý yok edip soldier yaratýr)
@@ -16,9 +18,15 @@ public class SoldierRecruitmentController : MonoBehaviour
         //Debug.Log(collision.gameObject.tag);
         if (collision.gameObject.tag == "ProtoMan")//Askerin çarptýðý protoman ise yani toplanýcak asker ise
         {
+            
             Vector3 protoPosition = collision.gameObject.transform.position;//ilk önce pozisyonunu alýyoruz ilerde kullanýcaz
+
             Destroy(collision.gameObject);//sonra yok ediyoruz
             Instantiate(soldier, protoPosition, Quaternion.identity);//sonra aldýðýmýz pozisyona bir asker spawnlýyoruz
+            
+            //tempChild = transform.GetChild(0).gameObject;//çocuðu çektik
+            //tempChild.transform.Rotate(90, 0, 0);
         }
+        
     }
 }

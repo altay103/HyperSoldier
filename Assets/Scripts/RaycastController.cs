@@ -10,6 +10,7 @@ public class RaycastController : MonoBehaviour
     public Ray ray;//rayi tutuyor
     Vector3 direction;
 
+
     /*
      * Bu scriptin amacý her birliðin saldýrma mesafesine animasyonlarýný ve 
      * hasar verme iþlerini baþlatma ihtiyacý gerekmiþ . Bu yüzden özel raycast atýlma iþi oluþmuþtur.
@@ -30,6 +31,7 @@ public class RaycastController : MonoBehaviour
         if (Physics.Raycast(ray, out hit, distance))
         {
             Debug.DrawLine(transform.position, hit.point, Color.red);//Debug yapabilmek için ýþýný çiziyoruz
+            
         }
         else
         {

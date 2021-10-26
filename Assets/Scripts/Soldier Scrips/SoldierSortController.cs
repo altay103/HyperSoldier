@@ -103,12 +103,6 @@ public class SoldierSortController : MonoBehaviour
         leader = GameObject.Find("Leader");//lider tagına sahip kişi bulundu 
         //genelede boş bir gameobjecte veririz bunu tagı 
     }
-    void ManuelDestroy()//olurda ilerde ölme filan işlemleri olursa bu fonksiyon ile ölücez
-    {
-        //destroya ek olarak ölümü komutana iletir bu sayaede yeni düzen hazırlanır 
-        GameObject.Find("Commander").GetComponent<CommanderController>().newState = true;
-        Destroy(gameObject);
-
-    }
+    
 
 }

@@ -13,7 +13,8 @@ GameObject:
   - component: {fileID: 6621721501421112315}
   - component: {fileID: 8743806744223324332}
   - component: {fileID: 3971355674949371145}
-  - component: {fileID: 4797341516792382202}
+  - component: {fileID: 4291702830466356056}
+  - component: {fileID: 4291069120606091966}
   m_Layer: 0
   m_Name: PhalanxMan
   m_TagString: Untagged
@@ -122,8 +123,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee85b259017808845b936a6d2b09b365, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  distance: 10
---- !u!114 &4797341516792382202
+  distance: 7
+--- !u!114 &4291702830466356056
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -132,9 +133,25 @@ MonoBehaviour:
   m_GameObject: {fileID: 5575366831993473433}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 894edde63f1bddc4585372eb20c3bd84, type: 3}
+  m_Script: {fileID: 11500000, guid: 3f9277f847ac8ba4bb4ce28e1fcbea90, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  health: 50
+  news: 1
+--- !u!114 &4291069120606091966
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5575366831993473433}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fccaf0943b3456d42be51e98ebecc1ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 600
+  enemyTag: Enemy
 --- !u!1001 &2458704804512254266
 PrefabInstance:
   m_ObjectHideFlags: 0

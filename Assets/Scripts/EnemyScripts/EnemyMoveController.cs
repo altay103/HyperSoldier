@@ -52,7 +52,7 @@ public class EnemyMoveController : MonoBehaviour
         else
         {
             nearSoldier = null;
-            Debug.Log("Boþ");
+            
         }
         distance = minDistance;
         

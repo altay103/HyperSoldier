@@ -72,7 +72,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lenght: 5
-  margin: 0.3
+  margin: 0.35
   leader: {fileID: 0}
   target: {x: 0, y: 0, z: 0}
   size: {x: 0, y: 0, z: 0}
@@ -109,6 +109,7 @@ MonoBehaviour:
   soldierTypes:
   - {fileID: 5575366831993473433, guid: ac8f96081d8be344f9f03e1c3e7662db, type: 3}
   - {fileID: 5575366831993473433, guid: 178dfe25ef80a634298bfc90e6315374, type: 3}
+  - {fileID: 5575366831993473433, guid: dc05fbea7d0e64f4d82bb1c6427493d5, type: 3}
 --- !u!114 &8830638433659625440
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -56,16 +56,20 @@
     <Compile Include="Assets\Scripts\Soldier Scrips\SoldierSortController.cs" />
     <Compile Include="Assets\Scripts\EnemyScripts\EnemyCreateController.cs" />
     <Compile Include="Assets\Scripts\RaycastController.cs" />
+    <Compile Include="Assets\Scripts\ArrowAI.cs" />
     <Compile Include="Assets\Scripts\PositionController.cs" />
     <Compile Include="Assets\Scripts\EnemyScripts\EnemyMoveController.cs" />
-    <Compile Include="Assets\Scripts\TransformFix.cs" />
-    <Compile Include="Assets\Scripts\LeaderController.cs" />
-    <Compile Include="Assets\Scripts\SpawnerController.cs" />
-    <Compile Include="Assets\Scripts\CommanderController.cs" />
+    <Compile Include="Assets\Scripts\Soldier Scrips\TransformFix.cs" />
+    <Compile Include="Assets\Scripts\Soldier Scrips\LeaderController.cs" />
+    <Compile Include="Assets\Scripts\Soldier Scrips\SpawnerController.cs" />
+    <Compile Include="Assets\Scripts\Soldier Scrips\CommanderController.cs" />
     <Compile Include="Assets\Scripts\Soldier Scrips\SoldierModeController.cs" />
     <Compile Include="Assets\Scripts\EnemyScripts\EnemySpawnerController.cs" />
     <Compile Include="Assets\Scripts\Soldier Scrips\SoldierRecruitmentController.cs" />
-    <Compile Include="Assets\Scripts\ChangeModeController.cs" />
+    <Compile Include="Assets\Scripts\Soldier Scrips\ChangeModeController.cs" />
+    <Compile Include="Assets\Scripts\DeathController.cs" />
+    <Compile Include="Assets\Scripts\FightController.cs" />
+    <Compile Include="Assets\Scripts\CameraController.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

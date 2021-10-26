@@ -21,8 +21,8 @@ public class SoldierModeController : MonoBehaviour
      */
     void Start()
     {
-       GameObject.Find("Commander").GetComponent<CommanderController>().newState = true;//komutana haber edildi yeni durum var diye
-       //Çünkü Yeni Asker Geldi 
+        GameObject.Find("Commander").GetComponent<CommanderController>().newState = true;//komutana haber edildi yeni durum var diye
+                                                                                         //Çünkü Yeni Asker Geldi 
     }
 
     void Update()
@@ -34,23 +34,33 @@ public class SoldierModeController : MonoBehaviour
     {
         if (mode != Mode)//şayet anlık mod static moddan farklı ise 
         {
+            
             GameObject tempChild;//işlem yapıcağımız gameobject seçiyoruz
-            Quaternion rotation=Quaternion.identity;//yaratılacak askerin yönünü tutuyor
+            Quaternion rotation = Quaternion.identity;//yaratılacak askerin yönünü tutuyor
             if (transform.childCount > 0)//şayet halihazırda çocuk varsa
             {
+
                 tempChild = transform.GetChild(0).gameObject;//çocuğu çektik
-                tempChild.transform.Rotate(90, 0, 0);
                 rotation = tempChild.transform.rotation;//eski askerin yönünü alıyoruz
                 Destroy(tempChild);//sonra destroy ettik
+                tempChild = Instantiate(soldierTypes[Mode], transform.position, rotation);//istenen tipte askermodeli spawn ettik
+                tempChild.transform.parent = transform;//bu askeride childimiz yaptık
             }
-            tempChild = Instantiate(soldierTypes[Mode], transform.position, rotation);//istenen tipte askermodeli spawn ettik
-            tempChild.transform.parent = transform;//bu askeride childimiz yaptık
+            else
+            {
+                //Debug.Log(gameObject.GetComponent<SoldierSortController>().id);
+                tempChild = Instantiate(soldierTypes[Mode], transform.position, rotation);//istenen tipte askermodeli spawn ettik
+                tempChild.transform.parent = transform;//bu askeride childimiz yaptık
+                tempChild.transform.Rotate(-90, 0, 0);//yatık bir şekilde geldiği için diktim 90 derece x ekseninde
+               
+            }
+            tempChild.transform.Translate(0, 0, 1);//origin merkeze olduğu için yarısı kadar ileri
 
             //mode = Mode;//anlık modu statik mod ile eşitledik
 
             //ReFix
-            
-            
+
+
 
 
         }
