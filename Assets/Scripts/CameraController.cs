@@ -6,6 +6,7 @@ public class CameraController : MonoBehaviour
 {
     // Start is called before the first frame update
     GameObject leader;
+    public float distance = 10;
     void Start()
     {
         leader = GameObject.Find("Leader");
@@ -14,6 +15,8 @@ public class CameraController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.position = new Vector3(transform.position.x, transform.position.y, leader.transform.position.z);
+        Vector3 target = new Vector3(transform.position.x, transform.position.y, leader.transform.position.z - distance);
+        transform.position=target;
+      
     }
 }

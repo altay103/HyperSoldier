@@ -6,18 +6,18 @@ public class LeaderController : MonoBehaviour
 {
    
     public float speed = 2;//liderin hızı
+    GameObject input;
     void Start()
     {
-        
+      
     }
 
     // Update is called once per frame
     void Update()
     {
-        float ver = Input.GetAxis("Vertical");//ileri geri tuşlarının basılma değerini aldık
-        float hor = Input.GetAxis("Horizontal");//sağ sol tuşlarının basılma değerlerini aldık
+        float hor = GameObject.Find("InputManager").GetComponent<InputController>().HorizontalAxis;
 
-        transform.Translate(speed*hor * Time.deltaTime, 0,speed* ver * Time.deltaTime,Space.World);//alınan verilere göre hareket sağladık
+        transform.Translate(speed*hor * Time.deltaTime, 0,speed* Time.deltaTime,Space.World);//alınan verilere göre hareket sağladık
         
 
   

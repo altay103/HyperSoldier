@@ -13,17 +13,19 @@ public class ChangeModeController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        int Mode = ModeController.Mode;
+        List<GameObject> soldierTypes = GameObject.Find("ModeManager").GetComponent<ModeController>().soldierTypes;
         if (Input.GetKeyDown(KeyCode.Space))
         {
             GameObject[] soldiers = GameObject.FindGameObjectsWithTag("Soldier");
             if (soldiers.Length > 0)
             {
-                if (soldiers[0].GetComponent<SoldierModeController>().soldierTypes.Count > 1)
+                if (soldierTypes.Count > 1)
                 {
-                    SoldierModeController.Mode++;
-                    if (SoldierModeController.Mode > (soldiers[0].GetComponent<SoldierModeController>().soldierTypes.Count - 1))
+                    Mode++;
+                    if (Mode > (soldierTypes.Count - 1))
                     {
-                        SoldierModeController.Mode = 0;
+                        Mode = 0;
                     }
                 }
             }

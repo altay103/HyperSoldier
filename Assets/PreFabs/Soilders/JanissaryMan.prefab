@@ -138,6 +138,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 25
   news: 1
+  effect: {fileID: 953305146778395058, guid: bcde242882b8a074b9c8045f2fbb8e09, type: 3}
 --- !u!114 &6604445989367464880
 MonoBehaviour:
   m_ObjectHideFlags: 0

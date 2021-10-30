@@ -5,13 +5,13 @@ using UnityEngine;
 public class SoldierModeController : MonoBehaviour
 {
 
-
-    public List<GameObject> soldierTypes;//asker tiplerini tutuyor 
+    List<GameObject> soldierTypes;
+    int Mode=0;
     /*
      Eklemeler sıralı yapılmalı 
      Static mode değişlenine atılan ilk değer doğar doğmaz çıkıcak askeri temsil eder
      */
-    public static int Mode = 0;//LegionMan=0 PhalanxMan=1 ArcherMan=2 vs ilerde eklenirse buraya eklenicek 
+
     int mode = -1;//modu tutuyoruz ilk defa çalışacağında çalışması için -1 gibi anlamsız bir değer atadım.
     /*
      Bu Script
@@ -27,6 +27,8 @@ public class SoldierModeController : MonoBehaviour
 
     void Update()
     {
+        Mode = ModeController.Mode;
+        soldierTypes = GameObject.Find("ModeManager").GetComponent<ModeController>().soldierTypes;
         CreateChild(mode);//moda göre child spawn ediyoruz
         mode = Mode;
     }

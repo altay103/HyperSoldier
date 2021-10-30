@@ -7,6 +7,7 @@ public class DeathController : MonoBehaviour
     // Start is called before the first frame update
     public float health=100;
     public bool news = true;
+    public GameObject effect;
     void Start()
     {
         
@@ -17,6 +18,7 @@ public class DeathController : MonoBehaviour
     {
         if (health <= 0)
         {
+            Instantiate(effect, transform.position, transform.rotation);
             if (news)
             {
                 ManuelDestroy();
